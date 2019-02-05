@@ -35,6 +35,10 @@ class QaToolsForm
   def input_lastname_field(text) 
     @chrome_driver.find_element(:name, LAST_NAME_FIELD).send_keys(text)
   end
+
+  def input_lastname_field_value 
+    @chrome_driver.find_element(:name, LAST_NAME_FIELD).attribute('value')
+  end
 end
 
 # test = QaToolsForm.new
