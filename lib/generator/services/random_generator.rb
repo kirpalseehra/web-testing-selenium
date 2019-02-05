@@ -10,8 +10,6 @@ class RandomFormData
     Faker::Name.last_name
   end
 
-
-
-
+  
 
 end
