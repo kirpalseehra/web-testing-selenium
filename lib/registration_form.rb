@@ -6,6 +6,7 @@ class RegistrationForm
   PRACTICE_FORM_URL = 'https://www.toolsqa.com/automation-practice-form'
   FIRST_NAME_FIELD = 'firstname' 
   LAST_NAME_FIELD = 'lastname'
+  DATE = 'datepicker'
 
   # creating a driver using the chrome extension for google chrome
   def initialize
@@ -37,13 +38,25 @@ class RegistrationForm
   def input_lastname_field_value 
     @chrome_driver.find_element(:name, LAST_NAME_FIELD).attribute('value')
   end
+
+  def date_field(text)
+    @chrome_driver.find_element(:id, DATE).send_keys(text)
+  end
+
+  def date_field_value
+    @chrome_driver.find_element(:id, DATE).attribute('value')
+  end
+
 end
 
-# test = QaToolsForm.new
-# test.visit_practice_form
+test = RegistrationForm.new
+test.visit_practice_form
 # test.input_firstname_field('Kirpal')
 # test.input_lastname_field('Seehra')
 # p test.input_firstname_field_value
+test.date_field('06/02/2019')
+p test.date_field_value
+
 
 # # sleep applies to the entire class
-# sleep 5
+sleep 10

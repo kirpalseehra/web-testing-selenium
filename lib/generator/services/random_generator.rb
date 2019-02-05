@@ -10,4 +10,8 @@ class RandomFormData
     Faker::Name.last_name
   end
 
+  def date 
+    Faker::Date.forward(100)
+  end
+
 end

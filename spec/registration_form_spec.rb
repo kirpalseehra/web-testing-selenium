@@ -9,6 +9,8 @@ describe 'Testing the demo qa automation form' do
     @url = 'https://www.toolsqa.com/automation-practice-form'
     @firstname = Generator.new.registration_form_data.first_name
     @lastname = Generator.new.registration_form_data.last_name
+    @date = Generator.new.registration_form_data.date.to_s
+
   end
 
   context 'Testing the positive paths for the form' do
@@ -26,6 +28,12 @@ describe 'Testing the demo qa automation form' do
     @driver.input_lastname_field(@lastname)
     expect(@driver.input_lastname_field_value).to eq @lastname
     end
+
+    it 'should accept a date' do
+      @driver.date_field(@date)
+      expect(@driver.date_field_value).to eq @date
+    end
+
 
   end
 

@@ -16,6 +16,10 @@ describe 'Testing the random generator' do
       expect(@random_generator.last_name).to be_kind_of(String)
     end
 
+    it 'should return a date for date' do
+      expect(@random_generator.date).to be_kind_of(Date)
+    end
+
   end
 
 
