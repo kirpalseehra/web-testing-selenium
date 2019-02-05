@@ -23,8 +23,6 @@ class RegistrationForm
   # this method gets the value of the element in the specified field e.g. firstname
   def input_firstname_field_value
     @chrome_driver.find_element(:name, FIRST_NAME_FIELD).attribute('value')
-    # alternative way is to do 
-    # @chrome_driver.find_element(:name, FIRST_NAME_FIELD)['value']
   end
 
   # use this to access the current url
