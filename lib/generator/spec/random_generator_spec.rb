@@ -6,7 +6,7 @@ describe 'Testing the random generator' do
     @random_generator = Generator.new.registration_form_data
   end
 
-  context '' do
+  context 'Testing the registration form fields' do
 
     it 'should return a String for firstname' do
       expect(@random_generator.first_name).to be_kind_of(String)

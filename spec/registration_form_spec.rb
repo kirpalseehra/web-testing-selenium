@@ -7,10 +7,8 @@ describe 'Testing the demo qa automation form' do
     @driver = RegistrationForm.new
     @driver.visit_practice_form
     @url = 'https://www.toolsqa.com/automation-practice-form'
-    @firstname = Faker::Name.first_name
-    @lastname = Faker::Name.last_name
-    # @name = "Hello friends my name is #{Faker::DragonBall.character}, I cant wait to go to lunch so I can sip on a nice #{Faker::Beer.name} and have a nice time with friends. My friends say I'm as good a footballer as #{Faker::Football.player} which is really nice of them. I have nice friends. GAGAGAGAGAGAGAGA. Vote for me as Director. "
-    # p @name
+    @firstname = Generator.new.registration_form_data.first_name
+    @lastname = Generator.new.registration_form_data.last_name
   end
 
   context 'Testing the positive paths for the form' do
