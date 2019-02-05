@@ -1,6 +1,6 @@
 require 'selenium-webdriver'
 
-class QaToolsForm
+class RegistrationForm
 
   # Page object which is in caps as its a constant
   PRACTICE_FORM_URL = 'https://www.toolsqa.com/automation-practice-form'

@@ -4,7 +4,7 @@ describe 'Testing the demo qa automation form' do
 
   before(:all) do
     # refers to our class that has the driver in and all the methods associated with that class
-    @driver = QaToolsForm.new
+    @driver = RegistrationForm.new
     @driver.visit_practice_form
     @url = 'https://www.toolsqa.com/automation-practice-form'
     @firstname = Faker::Name.first_name
