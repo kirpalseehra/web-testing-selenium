@@ -12,6 +12,7 @@ class RegistrationForm
   PROFESSION_CHECKBOX = 'profession-1'
   PROFILE_PICTURE = 'photo'
   AUTOMATION_TOOL = 'tool-0'
+  CONTINENTS_DROPDOWN = 'continents'
 
   # creating a driver using the chrome extension for google chrome
   def initialize
@@ -91,18 +92,4 @@ class RegistrationForm
   def input_automation_tool_field_value
     @chrome_driver.find_element(:id, AUTOMATION_TOOL).attribute('value')
   end
-
 end
-
-test = RegistrationForm.new
-test.visit_practice_form
-# test.input_firstname_field('Kirpal')
-# test.input_lastname_field('Seehra')
-# p test.input_firstname_field_value
-# test.date_field('06/02/2019')
-test.input_profile_pic_field
-p test.input_profile_pic_field_value
-
-
-# # sleep applies to the entire class
-sleep 10

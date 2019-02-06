@@ -10,7 +10,6 @@ describe 'Testing the demo qa automation form' do
     @firstname = Generator.new.registration_form_data.first_name
     @lastname = Generator.new.registration_form_data.last_name
     @date = Generator.new.registration_form_data.date.to_s
-
   end
 
   context 'Testing the positive paths for the form' do
@@ -55,12 +54,8 @@ describe 'Testing the demo qa automation form' do
     end
 
     it 'should select QTP as the automation tool' do
-
       @driver.input_automation_tool_field
       expect(@driver.input_automation_tool_field_value).to eq "QTP"
-
     end
-
   end
-
 end
