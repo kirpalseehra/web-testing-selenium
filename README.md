@@ -23,5 +23,5 @@ Ruby
 ### Learning points
 1. Better understanding of using UI testing and how to target specific fields on a web browser
 2. Greater knowledge of how to apply a random generator into testing
-3. Better understanding on using the selenium module as a whole 
+3. Better understanding on using the selenium module as a whole and all the methods to find elements within a web page
 
