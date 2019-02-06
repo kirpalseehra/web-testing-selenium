@@ -9,6 +9,7 @@ class RegistrationForm
   DATE = 'datepicker'
   GENDER_RADIO = 'sex-0'
   EXPERIENCE_RADIO = 'exp-4'
+  PROFESSION_CHECKBOX = 'profession-1'
 
   # creating a driver using the chrome extension for google chrome
   def initialize
@@ -65,7 +66,13 @@ class RegistrationForm
     @chrome_driver.find_element(:id, EXPERIENCE_RADIO).attribute('value')
   end
 
+  def input_prof_checkbox_field
+    @chrome_driver.find_element(:id, PROFESSION_CHECKBOX).click
+  end
 
+  def input_prof_checkbox_field_value
+    @chrome_driver.find_element(:id, PROFESSION_CHECKBOX).attribute('value')
+  end
 
 end
 
