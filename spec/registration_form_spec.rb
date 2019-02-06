@@ -47,7 +47,11 @@ describe 'Testing the demo qa automation form' do
     it 'should select automation tester as the profession' do 
       @driver.input_prof_checkbox_field
       expect(@driver.input_prof_checkbox_field_value).to eq "Automation Tester"
+    end
 
+    it 'should select the choose file button on profile picture' do
+      @driver.input_profile_pic_field
+      expect(@driver.input_profile_pic_field_value). to eq ""
     end
 
   end
