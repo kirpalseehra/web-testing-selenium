@@ -54,6 +54,13 @@ describe 'Testing the demo qa automation form' do
       expect(@driver.input_profile_pic_field_value). to eq ""
     end
 
+    it 'should select QTP as the automation tool' do
+
+      @driver.input_automation_tool_field
+      expect(@driver.input_automation_tool_field_value).to eq "QTP"
+
+    end
+
   end
 
 end

@@ -11,6 +11,7 @@ class RegistrationForm
   EXPERIENCE_RADIO = 'exp-4'
   PROFESSION_CHECKBOX = 'profession-1'
   PROFILE_PICTURE = 'photo'
+  AUTOMATION_TOOL = 'tool-0'
 
   # creating a driver using the chrome extension for google chrome
   def initialize
@@ -81,6 +82,14 @@ class RegistrationForm
 
   def input_profile_pic_field_value
     @chrome_driver.find_element(:id, PROFILE_PICTURE).attribute('value')
+  end
+
+  def input_automation_tool_field
+    @chrome_driver.find_element(:id, AUTOMATION_TOOL).click
+  end
+
+  def input_automation_tool_field_value
+    @chrome_driver.find_element(:id, AUTOMATION_TOOL).attribute('value')
   end
 
 end
