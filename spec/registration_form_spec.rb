@@ -34,6 +34,11 @@ describe 'Testing the demo qa automation form' do
       expect(@driver.date_field_value).to eq @date
     end
 
+    it 'should select male as a gender type' do 
+      @driver.input_gender_radio_field
+      expect(@driver.input_gender_radio_field_value).to eq 'Male'
+    end
+
 
   end
 
