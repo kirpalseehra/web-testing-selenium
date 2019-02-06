@@ -13,6 +13,7 @@ class RegistrationForm
   PROFILE_PICTURE = 'photo'
   AUTOMATION_TOOL = 'tool-0'
   CONTINENTS_DROPDOWN = 'continents'
+  DROPDOWN_ELEMENT = 'option'
 
   # creating a driver using the chrome extension for google chrome
   def initialize
@@ -95,8 +96,8 @@ class RegistrationForm
 
   def select_dropdown
     @select = @chrome_driver.find_element(:id, CONTINENTS_DROPDOWN)
-    @individualElement = @select.find_elements(:tag_name => 'option')
-    @individualElement.each {|option| if option.text == "Europe"; option.click end}
+    @individualElement = @select.find_elements(:tag_name => DROPDOWN_ELEMENT)
+    @individualElement.each {|option| if option.text == "Africa"; option.click end}
   end
 
   def select_dropdown_value
