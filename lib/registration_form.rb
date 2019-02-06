@@ -8,6 +8,7 @@ class RegistrationForm
   LAST_NAME_FIELD = 'lastname'
   DATE = 'datepicker'
   GENDER_RADIO = 'sex-0'
+  EXPERIENCE_RADIO = 'exp-4'
 
   # creating a driver using the chrome extension for google chrome
   def initialize
@@ -56,6 +57,14 @@ class RegistrationForm
     @chrome_driver.find_element(:id, GENDER_RADIO).attribute('value')
   end
 
+  def input_exp_radio_field
+    @chrome_driver.find_element(:id, EXPERIENCE_RADIO).click
+  end
+
+  def input_exp_radio_field_value
+    @chrome_driver.find_element(:id, EXPERIENCE_RADIO).attribute('value')
+  end
+
 
 
 end
@@ -66,8 +75,8 @@ test.visit_practice_form
 # test.input_lastname_field('Seehra')
 # p test.input_firstname_field_value
 # test.date_field('06/02/2019')
-test.input_gender_radio_field
-p test.input_gender_radio_field_value
+test.input_exp_radio_field
+p test.input_exp_radio_field_value
 
 
 # # sleep applies to the entire class
