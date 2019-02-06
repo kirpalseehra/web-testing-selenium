@@ -92,4 +92,19 @@ class RegistrationForm
   def input_automation_tool_field_value
     @chrome_driver.find_element(:id, AUTOMATION_TOOL).attribute('value')
   end
+
+  def select_dropdown
+    @select = @chrome_driver.find_element(:id, CONTINENTS_DROPDOWN)
+    @individualElement = @select.find_elements(:tag_name => 'option')
+    @individualElement.each {|option| if option.text == "Europe"; option.click end}
+  end
+
+  def select_dropdown_value
+    @chrome_driver.find_element(:id, CONTINENTS_DROPDOWN).attribute('value')
+  end
 end
+
+test = RegistrationForm.new
+test.visit_practice_form
+test.select_dropdown
+p test.select_dropdown_value

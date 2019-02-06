@@ -1,7 +1,6 @@
 require 'spec_helper'
 
 describe 'Testing the demo qa automation form' do
-
   before(:all) do
     # refers to our class that has the driver in and all the methods associated with that class
     @driver = RegistrationForm.new
